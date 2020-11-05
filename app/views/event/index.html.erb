@@ -4,7 +4,7 @@
     <div class="card-group">
       <div class="card">
         <% @event.each do |p| %>
-        <p>Nom de l'évènement : <%= p.title %> / Organisateur : <%= p.user.first_name %> - <a href="/event/:id<%= p.id%>">Voir l'évènement</a></p>
+        <p>Nom de l'évènement : <%= p.title %> / Organisateur : <%= p.user.first_name %> - <a href="/event/<%= p.id%>">Voir l'évènement</a></p>
 	    <% end %>
       </div>
     </div>

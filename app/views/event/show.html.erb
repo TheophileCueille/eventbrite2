@@ -1,11 +1,11 @@
 <section class="jumbotron text-center">
         <div class="container">
             <h1>Evènement n°<%= @id %> !</h1>
-            <h4>Titre de l'évènement : <%= @event_title %></h4>
-            <h4>Prix de l'évènement : <%= @event_price %></h4>
-            <h4>Début de l'évènement : <%= @event_start_date %></h4>
-            <h4>Lieu de l'évènement : <%= @event_location %></h4>
-            <p>Description de l'évènement : <%= @event_description%></p>
+            <h4>Titre de l'évènement : <%= @event.title %></h4>
+            <h4>Prix de l'évènement : <%= @event.price %></h4>
+            <h4>Début de l'évènement : <%= @event.start_date %></h4>
+            <h4>Lieu de l'évènement : <%= @event.location %></h4>
+            <p>Description de l'évènement : <%= @event.description%></p>
             <a href='/event/:id/edit' class="btn btn-primary">Editer l'évènement</a>
             <a href='/event/<%= @id %>' class="btn btn-danger" data-confirm="Etes-vous sûrs de supprimer cet évènement?!" 
             data-method="DELETE">Supprimer l'évènement' </a>
