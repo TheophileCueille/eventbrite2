@@ -4,13 +4,8 @@ class EventController < ApplicationController
   end
 
   def show
-
-		@id = params[:id]
-		@event_title = @event.title
-		@event_price = @event.price
-		@event_location = @event.location
-		@event_description = @event.description
-		@event_duration= @event.duration 
+    @id = params[:id]
+    @event = Event.find_by_id(params[:id])
   end
 
   def index
