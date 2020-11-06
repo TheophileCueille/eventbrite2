@@ -1,4 +1,5 @@
 class EventController < ApplicationController
+  
   def new
     @event = Event.new
   end
@@ -11,15 +12,15 @@ class EventController < ApplicationController
   def index
     @event = Event.all
   end
-
+ 
   def create
-    @event = Event.new
-    @event.duration = params[:duration]
-    @event.title = params[:title]
-    @event.price = params[:price]
-    @event.location = params[:location]
-    @event.start_date = params[:start_date]
-    @event.user = current_user
+      @event = Event.new
+      @event.duration = params[:duration]
+      @event.title = params[:title]
+      @event.price = params[:price]
+      @event.location = params[:location]
+      @event.start_date = params[:start_date]
+      @event.user = current_user
     if
       @event.save
       redirect_to event_index_path
